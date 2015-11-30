@@ -288,17 +288,18 @@ endfunc
 
 func AddComment()
     call append(1, '/**************************************************')
-    call append(2, ' *')
+    call append(2, ' *    ')
     call append(3, ' *    Filename:      '.expand("%"))
-    call append(4, ' *')
+    call append(4, ' *    ')
     call append(5, ' *    Copyright:     (C) '.strftime("%Y").' All rights reserved')
-    call append(6, ' *')
+    call append(6, ' *    ')
     call append(7, ' *    Author:        Theast')
     call append(8, ' *    Email:         Daidong123654@126.com')
     call append(9, ' *    Description:   ---')
     call append(10,' *    Create:        '.strftime("%Y-%m-%d %H:%M:%S"))
     call append(11,' *    Last Modified: '.strftime("%Y-%m-%d %H:%M:%S"))
-    call append(12,' **************************************************/ ')
+    call append(12,' *    ')
+    call append(13,' **************************************************/ ')
 endfunc
 
 
