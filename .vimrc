@@ -298,7 +298,7 @@ func AddComment()
     call append(9, ' *    Description:   ---')
     call append(10,' *    Create:        '.strftime("%Y-%m-%d %H:%M:%S"))
     call append(11,' *    Last Modified: '.strftime("%Y-%m-%d %H:%M:%S"))
-    call append(12,' *************************************************/ ')
+    call append(12,' **************************************************/ ')
 endfunc
 
 
