@@ -2,6 +2,9 @@ set nocompatible
 filetype off
 "自定义删除空白行命令
 command Nobl g/^\s*$/d
+
+set backspace=indent,eol,start
+
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
@@ -288,20 +291,15 @@ endfunc
 
 func AddComment()
     call append(1, '/**************************************************')
-    call append(2, ' *    ')
-    call append(3, ' *    Filename:      '.expand("%"))
-    call append(4, ' *    ')
-    call append(5, ' *    Copyright:     (C) '.strftime("%Y").' All rights reserved')
-    call append(6, ' *    ')
-    call append(7, ' *    Author:        Theast')
-    call append(8, ' *    Email:         Daidong123654@126.com')
-    call append(9, ' *    Description:   ---')
-    call append(10,' *    Create:        '.strftime("%Y-%m-%d %H:%M:%S"))
-    call append(11,' *    Last Modified: '.strftime("%Y-%m-%d %H:%M:%S"))
-    call append(12,' *    ')
-    call append(13,' **************************************************/ ')
+    call append(2, ' *    Filename:      '.expand("%"))
+    call append(3, ' *    Copyright:     (C) '.strftime("%Y").' All rights reserved')
+    call append(4, ' *    Author:        Theast')
+    call append(5, ' *    Email:         Daidong123654@126.com')
+    call append(6, ' *    Description:   ---')
+    call append(7, ' *    Create:        '.strftime("%Y-%m-%d %H:%M:%S"))
+    call append(8, ' *    Last Modified: '.strftime("%Y-%m-%d %H:%M:%S"))
+    call append(9,' *************************************************/ ')
 endfunc
-
 
 "每次按下F2也会插入头部文件
 map <F2> :call SetComment()<CR>:10<CR>o
@@ -309,7 +307,7 @@ map <F2> :call SetComment()<CR>:10<CR>o
 "自动修改最后修改时间
 "SET Last Modified Time START
 func DataInsert()
-    call cursor(9,1)
+    call cursor(13,1)
     if search ('Last Modified') != 0
         let line = line('.')
         call setline(line, ' *    Last Modified: '.strftime("%Y-%m-%d %H:%M:%S"))
