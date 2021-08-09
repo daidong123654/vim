@@ -315,3 +315,7 @@ func DataInsert()
 endfunc
 autocmd FileWritePre,BufWritePre *.php,*.js,*.cpp,*.c,*.py ks|call DataInsert() |'s
 "SET Last Modified Time END
+"
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
